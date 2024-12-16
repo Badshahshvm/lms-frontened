@@ -41,11 +41,11 @@ const SearchCourse = () => {
   }
 
   return (
-    <div className="m-6 p-6 flex flex-col gap-6 bg-gray-50 rounded shadow-md mt-10">
+    <div className="m-6 p-6 flex flex-col gap-6 bg-gray-50 dark:bg-gray-800 dark:text-white rounded shadow-md mt-10">
       {courses.map((course) => (
         <div
           key={course._id}
-          className="flex flex-col md:flex-row justify-between items-start md:items-center border-b border-gray-300 py-4 gap-4 mt-10"
+          className="flex flex-col md:flex-row justify-between items-start md:items-center border-b border-gray-300 dark:border-gray-700 py-4 gap-4 mt-10"
         >
           {/* Course Details */}
           <Link

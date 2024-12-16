@@ -115,8 +115,6 @@ function App() {
         <RouterProvider router={appRouter} />
         {/* Add ToastContainer */}
         <ToastContainer
-          position="top-right"
-          autoClose={5000}
           theme="colored" // Adjust theme: "light", "dark", or "colored"
         />
       </ThemeProvider>

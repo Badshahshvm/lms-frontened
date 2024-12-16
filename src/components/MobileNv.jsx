@@ -90,7 +90,7 @@ import {
 } from "@/components/ui/sheet";
 import { Menu } from "lucide-react";
 import DarkMode from "@/DarkMode";
-import { useNavigate } from "react-router-dom"; // Import useNavigate
+import { Link, useNavigate } from "react-router-dom"; // Import Link and useNavigate
 
 const MobileNv = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false); // Track login state
@@ -111,7 +111,6 @@ const MobileNv = () => {
     localStorage.removeItem("role");
     setIsLoggedIn(false);
     setRole("");
-    // Update state to reflect logout without page reload
   };
 
   return (
@@ -139,18 +138,18 @@ const MobileNv = () => {
           {/* Navigation Links */}
           {isLoggedIn ? (
             <nav className="flex flex-col gap-4 text-lg">
-              <a
-                href="/my-learning"
+              <Link
+                to="/my-learning"
                 className="hover:text-white font-semibold hover:border p-2 rounded-lg hover:bg-blue-400"
               >
                 My Learning
-              </a>
-              <a
-                href="/profile"
+              </Link>
+              <Link
+                to="/profile"
                 className="hover:text-white font-semibold hover:border p-2 rounded-lg hover:bg-blue-400"
               >
                 Profile
-              </a>
+              </Link>
               <button
                 onClick={handleLogout}
                 className="text-white bg-red-700 font-semibold hover:border p-2 rounded-lg hover:bg-red-600"
@@ -173,12 +172,12 @@ const MobileNv = () => {
             </nav>
           ) : (
             <nav className="flex flex-col gap-4 text-lg">
-              <a
-                href="/login"
+              <Link
+                to="/login"
                 className="hover:text-white font-semibold hover:border p-2 rounded-lg hover:bg-green-500"
               >
-                register
-              </a>
+                Register
+              </Link>
             </nav>
           )}
         </SheetContent>

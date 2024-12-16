@@ -27,6 +27,7 @@ import SearchCourse from "./Pages/student/SearchCourse";
 // Import Toastify
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import PrivateRoute from "./PrivateRoute";
 
 const appRouter = createBrowserRouter([
   {
@@ -65,7 +66,11 @@ const appRouter = createBrowserRouter([
       },
       {
         path: "course-details/:courseId",
-        element: <CourseDetails />,
+        element: (
+          <PrivateRoute>
+            <CourseDetails />
+          </PrivateRoute>
+        ),
       },
       {
         path: "course-progress/:courseId",

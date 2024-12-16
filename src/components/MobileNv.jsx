@@ -177,7 +177,7 @@ const MobileNv = () => {
                 href="/login"
                 className="hover:text-white font-semibold hover:border p-2 rounded-lg hover:bg-green-500"
               >
-                Register
+                register
               </a>
             </nav>
           )}
